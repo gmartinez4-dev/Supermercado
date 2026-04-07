@@ -10,4 +10,13 @@ public class Textil extends Producte {
     public double calcularPreu() {
         return preu;
     }
+
+
+    public String getComposicio() {
+        return composicio;
+    }
+
+    public void setComposicio(String composicio) {
+        this.composicio = composicio;
+    }
 }

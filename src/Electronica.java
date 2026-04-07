@@ -10,4 +10,12 @@ public class Electronica extends Producte {
     public double calcularPreu() {
         return preu + preu * (diesGarantia / 365.0) * 0.1;
     }
+
+    public int getDiesGarantia() {
+        return diesGarantia;
+    }
+
+    public void setDiesGarantia(int diesGarantia) {
+        this.diesGarantia = diesGarantia;
+    }
 }

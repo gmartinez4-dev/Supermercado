@@ -1,4 +1,4 @@
-public abstract class Producte {
+public abstract class Producte implements Comparable<Producte> {
     protected String nom;
     protected double preu;
     protected String codiBarres;
@@ -14,4 +14,22 @@ public abstract class Producte {
     public String getCodiBarres() { return codiBarres; }
 
     public abstract double calcularPreu();
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPreu(double preu) {
+        this.preu = preu;
+    }
+
+    public void setCodiBarres(String codiBarres) {
+        this.codiBarres = codiBarres;
+    }
+
+    // 🔥 IMPLEMENTACIÓN DE COMPARABLE (orden natural por nombre)
+    @Override
+    public int compareTo(Producte altre) {
+        return this.nom.compareTo(altre.nom);
+    }
 }

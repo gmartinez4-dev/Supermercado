@@ -24,4 +24,13 @@ public class Alimentacio extends Producte {
 
         return Math.round(resultat * 100.0) / 100.0;
     }
+
+
+    public LocalDate getDataCaducitat() {
+        return dataCaducitat;
+    }
+
+    public void setDataCaducitat(LocalDate dataCaducitat) {
+        this.dataCaducitat = dataCaducitat;
+    }
 }

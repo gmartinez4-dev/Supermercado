@@ -16,6 +16,7 @@ public class Main {
             System.out.println("1) Introduir producte");
             System.out.println("2) Passar per caixa");
             System.out.println("3) Mostrar carret de compra");
+            System.out.println("4) Cercar producte per codi"); // 🔥 NUEVO
             System.out.println("0) Acabar");
 
             op = sc.nextInt();
@@ -99,6 +100,14 @@ public class Main {
                 case 3:
                     System.out.println("Carret");
                     carret.mostrarCarret();
+                    break;
+
+                case 4: // 🔥 NUEVO
+                    System.out.print("Introdueix codi de barres: ");
+                    String codiBuscar = sc.nextLine();
+
+                    String resultat = carret.buscarNomPerCodi(codiBuscar);
+                    System.out.println("Resultat: " + resultat);
                     break;
             }
 
